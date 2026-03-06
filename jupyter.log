@@ -1,0 +1,196 @@
+nohup: ignoring input
+[I 2026-03-03 16:26:28.708 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-03-03 16:26:28.717 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-03-03 16:26:28.725 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-03-03 16:26:28.732 ServerApp] notebook | extension was successfully linked.
+[I 2026-03-03 16:26:29.030 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-03-03 16:26:29.048 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-03-03 16:26:29.050 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-03-03 16:26:29.051 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-03-03 16:26:29.056 LabApp] JupyterLab extension loaded from /home/faculty/dmk333/miniforge3/envs/astronomy/lib/python3.11/site-packages/jupyterlab
+[I 2026-03-03 16:26:29.056 LabApp] JupyterLab application directory is /home/faculty/dmk333/miniforge3/envs/astronomy/share/jupyter/lab
+[I 2026-03-03 16:26:29.057 LabApp] Extension Manager is 'pypi'.
+[I 2026-03-03 16:26:29.095 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-03-03 16:26:29.101 ServerApp] notebook | extension was successfully loaded.
+[I 2026-03-03 16:26:29.102 ServerApp] Serving notebooks from local directory: /scratch/dmk333_new/Astronomy
+[I 2026-03-03 16:26:29.102 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2026-03-03 16:26:29.102 ServerApp] http://localhost:8888/lab?token=41dc01a3b4497cc30754579dae86298b25de30f46be40ec3
+[I 2026-03-03 16:26:29.102 ServerApp]     http://127.0.0.1:8888/lab?token=41dc01a3b4497cc30754579dae86298b25de30f46be40ec3
+[I 2026-03-03 16:26:29.102 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2026-03-03 16:26:29.366 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/faculty/dmk333/.local/share/jupyter/runtime/jpserver-2540697-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=41dc01a3b4497cc30754579dae86298b25de30f46be40ec3
+        http://127.0.0.1:8888/lab?token=41dc01a3b4497cc30754579dae86298b25de30f46be40ec3
+[I 2026-03-03 16:26:29.530 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+Opening in existing browser session.
+[W 2026-03-03 16:26:31.898 LabApp] Could not determine jupyterlab build status without nodejs
+/home/faculty/dmk333/miniforge3/envs/astronomy/lib/python3.11/site-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate(nb)
+[W 2026-03-03 16:26:32.374 ServerApp] Notebook sdss_spectra_clustering.ipynb is not trusted
+[I 2026-03-03 16:26:33.017 ServerApp] Kernel started: cab8854f-818d-4359-b7df-e0239fc8e311
+[I 2026-03-03 16:26:33.409 ServerApp] Adapting from protocol version 5.3 (kernel cab8854f-818d-4359-b7df-e0239fc8e311) to 5.4 (client).
+[I 2026-03-03 16:26:33.410 ServerApp] Connecting to kernel cab8854f-818d-4359-b7df-e0239fc8e311.
+[W 2026-03-03 16:26:33.412 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2026-03-03 16:26:33.424 ServerApp] Adapting from protocol version 5.3 (kernel cab8854f-818d-4359-b7df-e0239fc8e311) to 5.4 (client).
+[I 2026-03-03 16:26:33.428 ServerApp] Connecting to kernel cab8854f-818d-4359-b7df-e0239fc8e311.
+[I 2026-03-03 16:26:33.440 ServerApp] Adapting from protocol version 5.3 (kernel cab8854f-818d-4359-b7df-e0239fc8e311) to 5.4 (client).
+[I 2026-03-03 16:26:33.441 ServerApp] Connecting to kernel cab8854f-818d-4359-b7df-e0239fc8e311.
+[I 2026-03-03 16:28:32.419 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-03 16:30:32.456 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-03 16:31:20.419 ServerApp] Kernel interrupted: cab8854f-818d-4359-b7df-e0239fc8e311
+[I 2026-03-03 16:32:29.456 ServerApp] Kernel interrupted: cab8854f-818d-4359-b7df-e0239fc8e311
+[I 2026-03-03 16:32:32.501 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-03 16:34:32.544 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-03 16:38:32.588 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-03 17:00:32.633 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-04 09:30:32.749 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-04 09:32:32.805 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-04 09:34:32.861 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-04 09:36:32.917 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-04 09:38:33.031 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-04 09:40:33.156 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[I 2026-03-04 09:42:33.287 ServerApp] Saving file at /sdss_spectra_clustering.ipynb
+[W 2026-03-04 16:38:52.209 ServerApp] Notebook exploratory_WISE/wise_data_preprocessing.ipynb is not trusted
+[I 2026-03-04 16:38:52.503 ServerApp] Kernel started: b8ff2ee0-0e52-4600-8048-ea65ae58ed20
+[I 2026-03-04 16:38:52.889 ServerApp] Adapting from protocol version 5.3 (kernel b8ff2ee0-0e52-4600-8048-ea65ae58ed20) to 5.4 (client).
+[I 2026-03-04 16:38:52.891 ServerApp] Connecting to kernel b8ff2ee0-0e52-4600-8048-ea65ae58ed20.
+[I 2026-03-04 16:40:52.281 ServerApp] Saving file at /exploratory_WISE/wise_data_preprocessing.ipynb
+[W 2026-03-04 16:41:39.245 ServerApp] Notebook wise_data_preprocessing.ipynb is not trusted
+[I 2026-03-04 16:41:39.453 ServerApp] Kernel started: 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e
+[I 2026-03-04 16:41:39.861 ServerApp] Adapting from protocol version 5.3 (kernel 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e) to 5.4 (client).
+[I 2026-03-04 16:41:39.863 ServerApp] Connecting to kernel 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e.
+[I 2026-03-04 16:43:39.343 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-04 16:47:59.717 ServerApp] Starting buffering for 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e:c48eeaae-810a-4d1a-8674-6fcba7df3d47
+[I 2026-03-04 16:48:01.926 ServerApp] Starting buffering for b8ff2ee0-0e52-4600-8048-ea65ae58ed20:84bf61d7-1afa-49f0-b34e-a7befa09b880
+[W 2026-03-04 16:48:21.578 ServerApp] Notebook wise_data_preprocessing.ipynb is not trusted
+[I 2026-03-04 16:48:21.740 ServerApp] Adapting from protocol version 5.3 (kernel 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e) to 5.4 (client).
+[I 2026-03-04 16:48:21.741 ServerApp] Connecting to kernel 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e.
+[I 2026-03-04 16:50:21.637 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-04 16:51:30.206 ServerApp] Starting buffering for 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e:599eea88-18da-4486-9dfe-e67a0b6a8bf9
+[W 2026-03-04 16:51:33.728 ServerApp] Notebook wise_data_preprocessing.ipynb is not trusted
+[I 2026-03-04 16:51:33.879 ServerApp] Adapting from protocol version 5.3 (kernel 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e) to 5.4 (client).
+[I 2026-03-04 16:51:33.880 ServerApp] Connecting to kernel 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e.
+[I 2026-03-04 16:52:01.774 ServerApp] Starting buffering for 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e:fdc545c4-eaf7-48cc-9b2a-8f1421efaac5
+[W 2026-03-04 16:52:10.903 ServerApp] Notebook wise_data_preprocessing.ipynb is not trusted
+[I 2026-03-04 16:52:11.051 ServerApp] Adapting from protocol version 5.3 (kernel 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e) to 5.4 (client).
+[I 2026-03-04 16:52:11.052 ServerApp] Connecting to kernel 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e.
+[I 2026-03-04 16:54:10.957 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-04 16:55:24.164 ServerApp] Starting buffering for 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e:d3f44569-9113-40ff-b6a1-666191d94f21
+[I 2026-03-04 16:55:41.382 ServerApp] Kernel shutdown: 1ce2d18d-6ccb-43cb-a94f-ab8bd996322e
+[W 2026-03-04 16:55:45.412 ServerApp] delete /wise_data_preprocessing.ipynb
+[W 2026-03-04 16:55:53.956 ServerApp] Notebook wise_data_preprocessing.ipynb is not trusted
+[I 2026-03-04 16:55:54.212 ServerApp] Kernel started: 0622afe4-05a7-402d-88c0-4ae756a57534
+[I 2026-03-04 16:55:55.425 ServerApp] Adapting from protocol version 5.3 (kernel 0622afe4-05a7-402d-88c0-4ae756a57534) to 5.4 (client).
+[I 2026-03-04 16:55:55.426 ServerApp] Connecting to kernel 0622afe4-05a7-402d-88c0-4ae756a57534.
+[I 2026-03-04 16:57:54.008 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 09:50:03.130 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 09:52:03.166 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 09:54:03.457 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 09:58:03.131 ServerApp] Starting buffering for 0622afe4-05a7-402d-88c0-4ae756a57534:5701f311-7fc6-41b9-a645-ad9da2e9aae8
+[I 2026-03-05 09:58:08.217 ServerApp] Kernel shutdown: 0622afe4-05a7-402d-88c0-4ae756a57534
+[W 2026-03-05 09:58:08.942 ServerApp] delete /wise_data_preprocessing.ipynb
+[W 2026-03-05 09:58:16.989 ServerApp] Notebook wise_data_preprocessing.ipynb is not trusted
+[I 2026-03-05 09:58:17.189 ServerApp] Kernel started: 55517f9f-74cb-4ed6-bd21-4822f53a72aa
+[I 2026-03-05 09:58:17.907 ServerApp] Adapting from protocol version 5.3 (kernel 55517f9f-74cb-4ed6-bd21-4822f53a72aa) to 5.4 (client).
+[I 2026-03-05 09:58:17.909 ServerApp] Connecting to kernel 55517f9f-74cb-4ed6-bd21-4822f53a72aa.
+[I 2026-03-05 09:59:19.747 ServerApp] Kernel interrupted: 55517f9f-74cb-4ed6-bd21-4822f53a72aa
+[I 2026-03-05 09:59:22.054 ServerApp] Kernel interrupted: 55517f9f-74cb-4ed6-bd21-4822f53a72aa
+[I 2026-03-05 09:59:22.582 ServerApp] Kernel interrupted: 55517f9f-74cb-4ed6-bd21-4822f53a72aa
+[I 2026-03-05 09:59:30.286 ServerApp] Kernel restarted: 55517f9f-74cb-4ed6-bd21-4822f53a72aa
+[I 2026-03-05 09:59:30.289 ServerApp] Starting buffering for 55517f9f-74cb-4ed6-bd21-4822f53a72aa:e61b31bf-57b9-4dd5-9b2f-d56983e2643b
+[I 2026-03-05 09:59:30.292 ServerApp] Adapting from protocol version 5.3 (kernel 55517f9f-74cb-4ed6-bd21-4822f53a72aa) to 5.4 (client).
+[I 2026-03-05 09:59:30.292 ServerApp] Connecting to kernel 55517f9f-74cb-4ed6-bd21-4822f53a72aa.
+[I 2026-03-05 09:59:30.292 ServerApp] Restoring connection for 55517f9f-74cb-4ed6-bd21-4822f53a72aa:e61b31bf-57b9-4dd5-9b2f-d56983e2643b
+[I 2026-03-05 10:00:17.053 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 10:02:17.093 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 10:46:17.130 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 10:54:17.350 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 14:24:17.401 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 14:28:17.439 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 14:30:17.476 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-05 14:34:17.518 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[W 2026-03-05 15:01:16.585 ServerApp] Notebook reproduce_figure3_ppplot.ipynb is not trusted
+[I 2026-03-05 15:01:16.993 ServerApp] Kernel started: fd9d500f-0992-47ca-9811-ee315659178f
+[I 2026-03-05 15:01:17.906 ServerApp] Adapting from protocol version 5.3 (kernel fd9d500f-0992-47ca-9811-ee315659178f) to 5.4 (client).
+[I 2026-03-05 15:01:17.908 ServerApp] Connecting to kernel fd9d500f-0992-47ca-9811-ee315659178f.
+[I 2026-03-05 15:03:16.655 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 16:20:18.865 ServerApp] Kernel shutdown: cab8854f-818d-4359-b7df-e0239fc8e311
+[I 2026-03-05 16:20:18.869 ServerApp] Kernel shutdown: 55517f9f-74cb-4ed6-bd21-4822f53a72aa
+[I 2026-03-05 16:20:18.869 ServerApp] Kernel shutdown: fd9d500f-0992-47ca-9811-ee315659178f
+[I 2026-03-05 16:20:18.870 ServerApp] Kernel shutdown: b8ff2ee0-0e52-4600-8048-ea65ae58ed20
+[I 2026-03-05 16:20:24.066 ServerApp] Kernel started: 003990fa-2512-44ca-ac99-68be641d8dc5
+[I 2026-03-05 16:20:24.754 ServerApp] Adapting from protocol version 5.3 (kernel 003990fa-2512-44ca-ac99-68be641d8dc5) to 5.4 (client).
+[I 2026-03-05 16:20:24.755 ServerApp] Connecting to kernel 003990fa-2512-44ca-ac99-68be641d8dc5.
+[I 2026-03-05 16:21:16.704 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 16:23:16.745 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 16:25:16.785 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 18:09:16.826 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 18:10:45.519 ServerApp] Kernel shutdown: 003990fa-2512-44ca-ac99-68be641d8dc5
+[W 2026-03-05 18:10:46.744 ServerApp] delete /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 18:11:01.966 ServerApp] Kernel started: 66f61ec0-cbac-4395-b70d-f8412f17617b
+[I 2026-03-05 18:11:02.401 ServerApp] Adapting from protocol version 5.3 (kernel 66f61ec0-cbac-4395-b70d-f8412f17617b) to 5.4 (client).
+[I 2026-03-05 18:11:02.402 ServerApp] Connecting to kernel 66f61ec0-cbac-4395-b70d-f8412f17617b.
+[I 2026-03-05 18:13:02.347 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 18:15:02.378 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 18:17:02.431 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-05 18:19:02.468 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 10:30:59.954 ServerApp] Starting buffering for 66f61ec0-cbac-4395-b70d-f8412f17617b:a6d3882c-713f-439e-9923-ff46d42422dc
+[W 2026-03-06 10:31:32.152 ServerApp] Notebook sdss_data_preprocessing.ipynb is not trusted
+[I 2026-03-06 10:31:32.420 ServerApp] Kernel started: 006908b4-2a6c-4c57-bda0-dbaaf6951693
+[I 2026-03-06 10:31:33.106 ServerApp] Adapting from protocol version 5.3 (kernel 006908b4-2a6c-4c57-bda0-dbaaf6951693) to 5.4 (client).
+[I 2026-03-06 10:31:33.107 ServerApp] Connecting to kernel 006908b4-2a6c-4c57-bda0-dbaaf6951693.
+[I 2026-03-06 10:33:32.227 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[I 2026-03-06 11:15:32.269 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[I 2026-03-06 11:17:32.317 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[W 2026-03-06 11:26:46.630 ServerApp] Notebook reproduce_figure3_ppplot.ipynb is not trusted
+[I 2026-03-06 11:26:46.862 ServerApp] Adapting from protocol version 5.3 (kernel 66f61ec0-cbac-4395-b70d-f8412f17617b) to 5.4 (client).
+[I 2026-03-06 11:26:46.863 ServerApp] Connecting to kernel 66f61ec0-cbac-4395-b70d-f8412f17617b.
+[I 2026-03-06 11:27:32.376 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[I 2026-03-06 11:28:46.776 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 11:30:46.813 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 11:32:46.852 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 11:34:46.895 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 12:05:32.537 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[I 2026-03-06 12:06:18.427 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-06 13:53:12.405 ServerApp] Kernel interrupted: 006908b4-2a6c-4c57-bda0-dbaaf6951693
+[I 2026-03-06 13:53:12.962 ServerApp] Kernel interrupted: 006908b4-2a6c-4c57-bda0-dbaaf6951693
+[I 2026-03-06 13:53:19.001 ServerApp] Kernel shutdown: 66f61ec0-cbac-4395-b70d-f8412f17617b
+[I 2026-03-06 13:53:19.003 ServerApp] Kernel shutdown: 006908b4-2a6c-4c57-bda0-dbaaf6951693
+[W 2026-03-06 13:53:48.648 ServerApp] Notebook sdss_data_preprocessing.ipynb is not trusted
+[I 2026-03-06 13:53:48.807 ServerApp] Kernel started: 2a237a54-263c-4c91-84a3-050b36b9fe48
+[I 2026-03-06 13:53:49.421 ServerApp] Adapting from protocol version 5.3 (kernel 2a237a54-263c-4c91-84a3-050b36b9fe48) to 5.4 (client).
+[I 2026-03-06 13:53:49.422 ServerApp] Connecting to kernel 2a237a54-263c-4c91-84a3-050b36b9fe48.
+[W 2026-03-06 13:53:59.476 ServerApp] Notebook data_download.ipynb is not trusted
+[I 2026-03-06 13:53:59.651 ServerApp] Kernel started: a306db4e-a334-4ad9-95b3-d2db99c4946a
+[I 2026-03-06 13:54:00.053 ServerApp] Adapting from protocol version 5.3 (kernel a306db4e-a334-4ad9-95b3-d2db99c4946a) to 5.4 (client).
+[I 2026-03-06 13:54:00.054 ServerApp] Connecting to kernel a306db4e-a334-4ad9-95b3-d2db99c4946a.
+[I 2026-03-06 13:55:48.700 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[I 2026-03-06 13:55:59.521 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 14:17:59.558 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 14:19:05.974 ServerApp] Starting buffering for a306db4e-a334-4ad9-95b3-d2db99c4946a:8577a659-f25c-4d2f-a372-d5bebebdbf7d
+[W 2026-03-06 14:19:14.717 ServerApp] Notebook data_download.ipynb is not trusted
+[I 2026-03-06 14:19:14.893 ServerApp] Adapting from protocol version 5.3 (kernel a306db4e-a334-4ad9-95b3-d2db99c4946a) to 5.4 (client).
+[I 2026-03-06 14:19:14.894 ServerApp] Connecting to kernel a306db4e-a334-4ad9-95b3-d2db99c4946a.
+[I 2026-03-06 14:19:58.903 ServerApp] Kernel shutdown: a306db4e-a334-4ad9-95b3-d2db99c4946a
+[W 2026-03-06 14:19:59.428 ServerApp] delete /data_download.ipynb
+[W 2026-03-06 14:20:16.089 ServerApp] Notebook data_download.ipynb is not trusted
+[I 2026-03-06 14:20:16.317 ServerApp] Kernel started: edca3824-c1e1-492d-ad9c-1be300c83cfb
+[I 2026-03-06 14:20:16.828 ServerApp] Adapting from protocol version 5.3 (kernel edca3824-c1e1-492d-ad9c-1be300c83cfb) to 5.4 (client).
+[I 2026-03-06 14:20:16.829 ServerApp] Connecting to kernel edca3824-c1e1-492d-ad9c-1be300c83cfb.
+[I 2026-03-06 14:22:16.138 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 14:24:16.167 ServerApp] Saving file at /data_download.ipynb
+[W 2026-03-06 14:28:48.470 ServerApp] 404 GET /api/contents/scratch/dmk333_new/Astronomy_claude_code/data_download.ipynb?content=0&hash=0&1772825328468 (81d74bee5c9443e19d79c2ffeab7d718@127.0.0.1) 1.10ms referer=http://localhost:8888/lab/tree/data_download.ipynb
+[W 2026-03-06 14:28:48.471 ServerApp] 404 GET /api/contents/scratch/dmk333_new/Astronomy_claude_code/data_download.ipynb?content=0&hash=0&1772825328468 (127.0.0.1): No such file or directory: scratch/dmk333_new/Astronomy_claude_code/data_download.ipynb
+[I 2026-03-06 14:56:51.164 ServerApp] Starting buffering for edca3824-c1e1-492d-ad9c-1be300c83cfb:b5562373-3aad-40cb-b146-e6ea34bfe01e
+[I 2026-03-06 14:56:57.920 ServerApp] Kernel shutdown: edca3824-c1e1-492d-ad9c-1be300c83cfb
+[W 2026-03-06 14:56:58.443 ServerApp] delete /data_download.ipynb
+[W 2026-03-06 14:57:07.376 ServerApp] Notebook data_download.ipynb is not trusted
+[I 2026-03-06 14:57:07.605 ServerApp] Kernel started: 67d3059f-8157-4434-b4fb-1efc250c0733
+[I 2026-03-06 14:57:08.117 ServerApp] Adapting from protocol version 5.3 (kernel 67d3059f-8157-4434-b4fb-1efc250c0733) to 5.4 (client).
+[I 2026-03-06 14:57:08.118 ServerApp] Connecting to kernel 67d3059f-8157-4434-b4fb-1efc250c0733.
+[I 2026-03-06 14:59:08.344 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 15:02:50.955 ServerApp] Starting buffering for 67d3059f-8157-4434-b4fb-1efc250c0733:1d372f20-29f1-4139-ac47-7688ce7a1d98
