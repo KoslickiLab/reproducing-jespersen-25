@@ -3,3 +3,5 @@ wise_raw/
 ppplot_output/
 sdss_output/
 wise_output/
+.idea/
+.ipynb_checkpoints/
