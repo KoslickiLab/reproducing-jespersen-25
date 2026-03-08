@@ -315,3 +315,51 @@ Opening in existing browser session.
 [I 2026-03-06 22:16:56.304 ServerApp] Saving file at /data_download.ipynb
 [I 2026-03-06 22:18:26.219 ServerApp] Saving file at /wise_data_preprocessing.ipynb
 [I 2026-03-06 22:18:55.183 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 22:20:56.488 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 22:22:56.657 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 22:24:57.032 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 22:38:57.436 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 22:56:58.374 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 23:03:00.377 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 23:09:00.728 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 23:10:15.795 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 23:10:23.063 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 23:11:54.299 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[I 2026-03-06 23:11:54.354 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-06 23:12:16.196 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-06 23:13:25.135 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-06 23:13:55.328 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 23:15:25.382 ServerApp] Saving file at /wise_data_preprocessing.ipynb
+[I 2026-03-06 23:15:54.850 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[I 2026-03-06 23:15:56.542 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
+[I 2026-03-06 23:16:56.506 ServerApp] Starting buffering for d16f4b88-54fe-4fce-aedd-ff6c9e9354c9:e1269216-91fd-40cb-868e-2898212ed11b
+[I 2026-03-06 23:16:56.507 ServerApp] Starting buffering for 2a237a54-263c-4c91-84a3-050b36b9fe48:c0e95af3-9565-483c-9e78-f44b6029fdc7
+[I 2026-03-06 23:16:56.508 ServerApp] Starting buffering for a9cd51f2-7667-46c3-8d83-9cc2912f4e16:d7874d57-2576-402b-ae94-c8ea8f34ead0
+[I 2026-03-07 22:12:17.046 ServerApp] Adapting from protocol version 5.3 (kernel a9cd51f2-7667-46c3-8d83-9cc2912f4e16) to 5.4 (client).
+[I 2026-03-07 22:12:17.047 ServerApp] Connecting to kernel a9cd51f2-7667-46c3-8d83-9cc2912f4e16.
+[I 2026-03-07 22:12:17.048 ServerApp] Restoring connection for a9cd51f2-7667-46c3-8d83-9cc2912f4e16:d7874d57-2576-402b-ae94-c8ea8f34ead0
+[I 2026-03-07 22:12:17.149 ServerApp] Starting buffering for a9cd51f2-7667-46c3-8d83-9cc2912f4e16:d7874d57-2576-402b-ae94-c8ea8f34ead0
+[W 2026-03-07 22:12:18.679 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2026-03-07 22:12:18.692 ServerApp] Adapting from protocol version 5.3 (kernel 2a237a54-263c-4c91-84a3-050b36b9fe48) to 5.4 (client).
+[I 2026-03-07 22:12:18.693 ServerApp] Connecting to kernel 2a237a54-263c-4c91-84a3-050b36b9fe48.
+[I 2026-03-07 22:12:18.798 ServerApp] Adapting from protocol version 5.3 (kernel 67d3059f-8157-4434-b4fb-1efc250c0733) to 5.4 (client).
+[I 2026-03-07 22:12:18.799 ServerApp] Connecting to kernel 67d3059f-8157-4434-b4fb-1efc250c0733.
+[I 2026-03-07 22:12:18.873 ServerApp] Starting buffering for 2a237a54-263c-4c91-84a3-050b36b9fe48:ce64b86e-7473-49e1-b571-670cb23bd5b7
+[I 2026-03-07 22:12:18.920 ServerApp] Adapting from protocol version 5.3 (kernel a9cd51f2-7667-46c3-8d83-9cc2912f4e16) to 5.4 (client).
+[I 2026-03-07 22:12:18.921 ServerApp] Connecting to kernel a9cd51f2-7667-46c3-8d83-9cc2912f4e16.
+[I 2026-03-07 22:12:19.023 ServerApp] Adapting from protocol version 5.3 (kernel d16f4b88-54fe-4fce-aedd-ff6c9e9354c9) to 5.4 (client).
+[I 2026-03-07 22:12:19.024 ServerApp] Connecting to kernel d16f4b88-54fe-4fce-aedd-ff6c9e9354c9.
+[I 2026-03-07 22:12:19.024 ServerApp] Discarding 21 buffered messages for d16f4b88-54fe-4fce-aedd-ff6c9e9354c9:e1269216-91fd-40cb-868e-2898212ed11b
+[I 2026-03-07 22:12:19.080 ServerApp] Starting buffering for a9cd51f2-7667-46c3-8d83-9cc2912f4e16:44d1038f-b623-43da-82ea-fce6314db27d
+[I 2026-03-07 22:12:19.225 ServerApp] Starting buffering for d16f4b88-54fe-4fce-aedd-ff6c9e9354c9:d0ad5c1d-1d44-4da6-bda6-8f1e8539e804
+[I 2026-03-07 22:12:20.065 ServerApp] Adapting from protocol version 5.3 (kernel 2a237a54-263c-4c91-84a3-050b36b9fe48) to 5.4 (client).
+[I 2026-03-07 22:12:20.066 ServerApp] Connecting to kernel 2a237a54-263c-4c91-84a3-050b36b9fe48.
+[I 2026-03-07 22:12:20.204 ServerApp] Adapting from protocol version 5.3 (kernel 67d3059f-8157-4434-b4fb-1efc250c0733) to 5.4 (client).
+[I 2026-03-07 22:12:20.204 ServerApp] Connecting to kernel 67d3059f-8157-4434-b4fb-1efc250c0733.
+[I 2026-03-07 22:12:20.344 ServerApp] Adapting from protocol version 5.3 (kernel a9cd51f2-7667-46c3-8d83-9cc2912f4e16) to 5.4 (client).
+[I 2026-03-07 22:12:20.345 ServerApp] Connecting to kernel a9cd51f2-7667-46c3-8d83-9cc2912f4e16.
+[I 2026-03-07 22:12:20.373 ServerApp] Adapting from protocol version 5.3 (kernel d16f4b88-54fe-4fce-aedd-ff6c9e9354c9) to 5.4 (client).
+[I 2026-03-07 22:12:20.374 ServerApp] Connecting to kernel d16f4b88-54fe-4fce-aedd-ff6c9e9354c9.
+[I 2026-03-07 22:14:19.533 ServerApp] Saving file at /data_download.ipynb
+[I 2026-03-07 22:16:19.854 ServerApp] Saving file at /sdss_data_preprocessing.ipynb
+[I 2026-03-07 22:16:20.112 ServerApp] Saving file at /reproduce_figure3_ppplot.ipynb
