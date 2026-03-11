@@ -465,7 +465,7 @@ for j, b in enumerate(WISE_BAND_SHORT):
 
     y_obs  = Y_true_mag[det_mask, j]
     y_pred = Y_pred_mag[det_mask, j]
-    sigma  = Y_sigma_mag[det_mask, j]
+    sigma  = np.sqrt(Y_sigma_mag[det_mask, j])
 
     phat_emp[b]  = scipy_norm.pdf(y_pred, loc=y_obs,  scale=sigma)
     phat_data[b] = scipy_norm.pdf(0,      loc=0,       scale=sigma)
