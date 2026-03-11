@@ -53,7 +53,7 @@ torch.set_num_interop_threads(2)
 SDSS_DIR = Path("data/sdss_output")
 WISE_DIR = Path("data/wise_output")
 OUT_DIR  = Path("results/our_data")
-OUT_DIR.mkdir(exist_ok=True)
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Use GPU if available; with ~167K galaxies the full dataset fits comfortably in
 # GPU VRAM (~8 features × 167K × 4 bytes ≈ 5 MB), enabling full-batch gradient
@@ -677,7 +677,7 @@ for j, b in enumerate(WISE_BAND_SHORT):
 
     y_obs  = Y_true_mag[det_mask, j]
     y_pred = Y_pred_mag[det_mask, j]
-    sigma  = Y_sigma_mag[det_mask, j]
+    sigma  = np.sqrt(Y_sigma_mag[det_mask, j])
 
     phat_emp[b]  = scipy_norm.pdf(y_pred, loc=y_obs,  scale=sigma)
     phat_data[b] = scipy_norm.pdf(0,      loc=0,       scale=sigma)

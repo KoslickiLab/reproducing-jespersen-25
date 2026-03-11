@@ -69,7 +69,7 @@ REG0_CSV = DATA_DIR / "sdss_wise_cross_reg0.csv.gz"
 REG1_CSV = DATA_DIR / "sdss_wise_cross_reg1.csv.gz"
 
 OUT_DIR = Path("results/their_data")
-OUT_DIR.mkdir(exist_ok=True)
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 log.info(f"Using device: {DEVICE}")
