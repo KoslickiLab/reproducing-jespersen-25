@@ -16,5 +16,8 @@ mamba install -c conda-forge jupyterlab notebook ipykernel -y
 python -m ipykernel install --user --name astronomy --display-name "Python 3 (astronomy)"
 
 # 6. (Optional, for the full paper pipeline) spender autoencoder + PyTorch
-mamba install -c pytorch -c nvidia pytorch torchvision torchaudio pytorch-cuda=12.1 -y
+#mamba install -c pytorch -c nvidia pytorch torchvision torchaudio pytorch-cuda=12.1 -y
+# Make sure you're in your target conda env first
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+
 pip install spender
