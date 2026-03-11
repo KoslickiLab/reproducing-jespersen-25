@@ -10,7 +10,7 @@ connected" (arXiv:2503.03816). A copy is included in this repository as
 `2503.03816v1 The optical and infrared are connected Jespersen.pdf`.
 
 
-## Scientific background
+## Background
 
 The central question is whether the mid-infrared emission of a galaxy (which
 encodes star formation rate, dust content, and AGN activity) is sufficiently
@@ -124,7 +124,7 @@ and evaluation. Outputs written to `results/our_data/`:
 - `mlp_weights.pt`
 - `test_results.npz`
 
-**Expected results** (from `logs/our_data_run.log`, 238,839 galaxies):
+**Expected results** (from `logs/our_data_run.log`, 238,839 galaxies copied from my output logs using the sqrt(\sigma)):
 
 | Band | chi²_N (ours) | chi²_N (paper) |
 |------|--------------|---------------|
