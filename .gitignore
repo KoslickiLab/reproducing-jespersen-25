@@ -1,8 +1,18 @@
-sdss_raw/
-wise_raw/
-ppplot_output/
-sdss_output/
-wise_output/
+# Raw and preprocessed data (large, regenerable)
+/data/
+
+
+# Training outputs and results (large, regenerable)
+results/
+
+# Run logs (machine-generated)
+logs/
+
+# Deprecated run outputs (large, not worth tracking)
+deprecated/old_results/
+
+# IDE
 .idea/
+
+# Jupyter
 .ipynb_checkpoints/
-sdss_raw2/
