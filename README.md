@@ -5,8 +5,9 @@ mid-infrared (WISE W1-W4) photometry of galaxies can be predicted directly from
 their optical spectra via a shallow MLP trained on compressed spectral
 representations.
 
-**Reference paper**: Jespersen et al. (2025), "Predicting infrared photometry
-from optical spectra using machine learning"
+**Reference paper**: Jespersen et al. (2025), "The optical and infrared are
+connected" (arXiv:2503.03816). A copy is included in this repository as
+`2503.03816v1 The optical and infrared are connected Jespersen.pdf`.
 
 
 ## Scientific background
