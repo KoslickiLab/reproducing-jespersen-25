@@ -315,9 +315,17 @@ X_input = np.column_stack([
 
 X_input = np.nan_to_num(X_input, nan=0.0, posinf=0.0, neginf=0.0)
 
-# Set non-detected band magnitudes to 0 (placeholder) and inflate their
-# uncertainties to σ = 10^4 to mask them from the training loss.
-Y_mag   = np.where(wise_det, wise_mag,     0.0).astype(np.float32)           # (N, 4)
+# Non-detected bands have NaN magnitudes in our WISE output.  Fill NaN with the
+# per-band median of detected magnitudes so that the (down-weighted) non-detection
+# gradient averages to ~zero rather than pulling systematically toward 0 mag
+# (unphysically bright).  The large sigma (1e4) already makes these gradients tiny.
+band_medians = np.array([
+    np.nanmedian(wise_mag[wise_det[:, j], j]) for j in range(4)
+], dtype=np.float32)
+log.info(f"Non-detection fill values (per-band detected median): {dict(zip(WISE_BAND_SHORT, band_medians.round(3)))}")
+Y_mag = wise_mag.copy().astype(np.float32)
+for j in range(4):
+    Y_mag[~wise_det[:, j], j] = band_medians[j]
 Y_sigma = np.where(wise_det, wise_mag_err, NON_DETECTION_SIGMA).astype(np.float32)  # (N, 4)
 Y_sigma = np.where((Y_sigma > 0) & np.isfinite(Y_sigma), Y_sigma, NON_DETECTION_SIGMA)
 

@@ -163,9 +163,12 @@ detected = Y_sigma_raw < NONDET_THRESHOLD     # (N, 4) bool
 
 # For training: non-detected bands keep sigma = 9999 (already set in the CSV),
 # capped at NON_DETECTION_SIGMA to guard against any larger sentinel values.
+# Non-detected magnitude values are kept as-is from the CSV (real flux measurements
+# at the source position, just with large sigma).  Do NOT replace with 0.0 — that
+# would introduce a large systematic gradient toward unphysically bright predictions.
 Y_sigma = np.where(detected, Y_sigma_raw, NON_DETECTION_SIGMA).astype(np.float32)
 Y_sigma = np.where((Y_sigma > 0) & np.isfinite(Y_sigma), Y_sigma, NON_DETECTION_SIGMA)
-Y_mag   = np.where(detected, Y_mag_raw, 0.0).astype(np.float32)
+Y_mag   = Y_mag_raw.copy().astype(np.float32)
 
 log.info(f"Input shape:  {X_input.shape}")
 log.info(f"Target shape: {Y_mag.shape}")
