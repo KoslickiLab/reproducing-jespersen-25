@@ -81,8 +81,7 @@ SPENDER_BATCH  = 5000    # Mini-batch size for spender encoding (encoder is memo
 # The paper assigns σ = 10^4 magnitudes to these bands, making the Gaussian NLL
 # loss contribution ~log(10^4)/2 ≈ 9.2 — a large additive constant independent
 # of the prediction, so the gradient through non-detected bands is effectively zero.
-NON_DETECTION_SIGMA  = 1e4
-NONDET_THRESHOLD     = 5.0   # sigma < this → detected; separates real errors from sentinel
+NON_DETECTION_SIGMA = 1e4
 
 # Reference values from Jespersen et al. Table 3 for comparison.
 PAPER_CHI2      = {"W1": 1.33, "W2": 1.17, "W3": 2.23, "W4": 1.41}
@@ -413,22 +412,13 @@ print(model)
 # For evaluation (chi, PP-plot) we use the standard definition χ = (pred−obs)/σ_mag,
 # consistent with the paper's axis label "χ [magnitude]".
 
-loss_fn = nn.GaussianNLLLoss(reduction='none')
+loss_fn = nn.GaussianNLLLoss()
 
 def compute_loss(predictions, y_combined):
-    """
-    GaussianNLLLoss with var = sqrt(sigma_mag), restricted to detected bands only.
-
-    Non-detected bands (sigma >= NONDET_THRESHOLD) are excluded from the loss
-    entirely, eliminating systematic gradient bias from the median fill values
-    used for non-detected magnitudes.
-    """
-    mags     = y_combined[:, :4]
-    sigma    = y_combined[:, 4:]
-    var      = torch.sqrt(sigma)
-    det_mask = sigma < NONDET_THRESHOLD          # (N, 4) bool: detected bands only
-    loss_all = loss_fn(predictions, mags, var)   # (N, 4) per-element NLL
-    return loss_all[det_mask].mean()
+    mags  = y_combined[:, :4]
+    sigma = y_combined[:, 4:]
+    var   = torch.sqrt(sigma)    # demo's weighting: pass sqrt(σ) as the 'variance' argument
+    return loss_fn(predictions, mags, var)
 
 
 # =============================================================================
@@ -785,47 +775,6 @@ plt.tight_layout()
 plt.savefig(OUT_DIR / "mag_pred_vs_obs.png", dpi=150, bbox_inches="tight")
 plt.close()
 log.info("Saved mag_pred_vs_obs.png")
-
-# ── Paper-style: all test sources including non-detections ────────────────────
-# Matches the style of Jespersen et al. (2025) Fig. 4 which plots all sources.
-# NOTE: non-detected sources here have Y_true filled with per-band medians (not
-# real flux measurements), so the non-detection scatter is an artifact of that
-# fill choice rather than physical signal.  Treat this plot as visual comparison
-# only; the detection-only version above is the scientifically rigorous one.
-fig, axes = plt.subplots(2, 2, figsize=(14, 12))
-for j, b in enumerate(WISE_BAND_SHORT):
-    ax   = axes[j // 2, j % 2]
-    true = Y_true_mag[:, j]
-    pred = Y_pred_mag[:, j]
-    valid = np.isfinite(true) & np.isfinite(pred)
-    true, pred = true[valid], pred[valid]
-    scatter = (np.percentile(pred-true, [75, 25])[0] -
-               np.percentile(pred-true, [75, 25])[1]) / 1.349
-    bias  = np.median(true - pred)
-    tot   = np.hstack([true, pred])
-    l     = 0.01
-    ax.hist2d(true, pred, bins=50,
-              range=[np.percentile(tot, [l, 100-l])] * 2,
-              norm=plt.matplotlib.colors.LogNorm(), cmap="viridis")
-    lims = np.percentile(tot, [l, 100-l])
-    ax.plot(lims, lims, "k--", lw=1, label="Perfect")
-    ax.set(xlabel=f"Observed [{names[j]}]", ylabel=f"Predicted [{names[j]}]",
-           title=names[j])
-    font = {"size": 10}
-    ax.text(0.03, 0.85, f"Bias: {bias:.2f} mag",  transform=ax.transAxes, fontdict=font)
-    ax.text(0.03, 0.77, f"σ_IQR: {scatter:.2f}", transform=ax.transAxes, fontdict=font)
-    ax.text(0.03, 0.69, f"incl. {(~det_te[:,j]).sum():,} non-det. (median-filled)",
-            transform=ax.transAxes, fontdict=font)
-    ax.legend(loc="lower right", fontsize=8)
-
-plt.suptitle(
-    "Predicted vs Observed WISE magnitudes (Vega) — all sources incl. non-detections\n"
-    "(non-detected obs = per-band median fill; for visual comparison only)",
-    fontweight="bold", y=1.02)
-plt.tight_layout()
-plt.savefig(OUT_DIR / "mag_pred_vs_obs_all.png", dpi=150, bbox_inches="tight")
-plt.close()
-log.info("Saved mag_pred_vs_obs_all.png")
 
 
 # =============================================================================

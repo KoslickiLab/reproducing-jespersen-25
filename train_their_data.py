@@ -242,23 +242,19 @@ n_params = sum(p.numel() for p in model.parameters())
 print(f"\nMLP: {n_params} parameters")
 print(model)
 
-loss_fn = nn.GaussianNLLLoss(reduction='none')
+loss_fn = nn.GaussianNLLLoss()
 
 def compute_loss(predictions, y_combined):
     """
-    GaussianNLLLoss with var = sqrt(sigma_mag), restricted to detected bands only.
-
-    Non-detected bands (sigma >= NONDET_THRESHOLD) are excluded from the loss
-    entirely.  The upstream demo used large sigma (9999) to down-weight them, but
-    any finite fill value still introduces a systematic gradient bias.  Masking
-    is cleaner: the model receives no gradient signal from undetected bands.
+    GaussianNLLLoss with var = sqrt(sigma_mag), matching the demo exactly.
+    The var argument to GaussianNLLLoss is the variance (σ²) of the Gaussian.
+    Passing sqrt(sigma_mag) as 'var' is an unconventional choice that
+    down-weights high-uncertainty bands less aggressively than using sigma^2.
     """
-    mags     = y_combined[:, :4]
-    sigma    = y_combined[:, 4:]
-    var      = torch.sqrt(sigma)
-    det_mask = sigma < NONDET_THRESHOLD          # (N, 4) bool: detected bands only
-    loss_all = loss_fn(predictions, mags, var)   # (N, 4) per-element NLL
-    return loss_all[det_mask].mean()
+    mags  = y_combined[:, :4]
+    sigma = y_combined[:, 4:]
+    var   = torch.sqrt(sigma)    # demo's weighting: sqrt(sigma) as variance
+    return loss_fn(predictions, mags, var)
 
 
 # =============================================================================
@@ -556,48 +552,6 @@ plt.tight_layout()
 plt.savefig(OUT_DIR / "mag_pred_vs_obs.png", dpi=150, bbox_inches="tight")
 plt.close()
 log.info("Saved mag_pred_vs_obs.png")
-
-# ── Paper-style: all test sources including non-detections ────────────────────
-# Jespersen et al. (2025) Fig. 4 plots all sources without filtering by
-# detection status.  Non-detected sources have raw flux measurements at the
-# source position (real values, just with large sigma), so including them is
-# meaningful.  This version allows visual comparison with the paper's figures.
-fig, axes = plt.subplots(2, 2, figsize=(14, 12))
-for j, b in enumerate(WISE_BAND_SHORT):
-    ax   = axes[j // 2, j % 2]
-    true = Y_true_mag[:, j]
-    pred = Y_pred_mag[:, j]
-    # Exclude only genuinely pathological values (inf/NaN); keep non-detections.
-    valid = np.isfinite(true) & np.isfinite(pred)
-    true, pred = true[valid], pred[valid]
-    scatter = (np.percentile(pred-true, [75, 25])[0] -
-               np.percentile(pred-true, [75, 25])[1]) / 1.349
-    bias  = np.median(true - pred)
-    tot   = np.hstack([true, pred])
-    l     = 0.01
-    ax.hist2d(true, pred, bins=50,
-              range=[np.percentile(tot, [l, 100-l])] * 2,
-              norm=plt.matplotlib.colors.LogNorm(), cmap="viridis")
-    lims = np.percentile(tot, [l, 100-l])
-    ax.plot(lims, lims, "k--", lw=1, label="Perfect")
-    ax.set(xlabel=f"Observed [{names[j]}]", ylabel=f"Predicted [{names[j]}]",
-           title=names[j])
-    font = {"size": 10}
-    ax.text(0.03, 0.85, f"Bias: {bias:.2f} mag",  transform=ax.transAxes, fontdict=font)
-    ax.text(0.03, 0.77, f"σ_IQR: {scatter:.2f}", transform=ax.transAxes, fontdict=font)
-    n_nd = (~det_te[:, j])[valid].sum() if valid.sum() == len(valid) else (~det_te[:, j]).sum()
-    ax.text(0.03, 0.69, f"incl. {(~det_te[:,j]).sum():,} non-det.",
-            transform=ax.transAxes, fontdict=font)
-    ax.legend(loc="lower right", fontsize=8)
-
-plt.suptitle(
-    "Predicted vs Observed WISE magnitudes (Vega) — all sources incl. non-detections\n"
-    "Jespersen et al. latents + our MLP  (cf. Fig. 4 of Jespersen et al. 2025)",
-    fontweight="bold", y=1.02)
-plt.tight_layout()
-plt.savefig(OUT_DIR / "mag_pred_vs_obs_all.png", dpi=150, bbox_inches="tight")
-plt.close()
-log.info("Saved mag_pred_vs_obs_all.png")
 
 
 # =============================================================================
