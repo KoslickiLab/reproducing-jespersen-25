@@ -12,6 +12,6 @@ conda activate astronomy
 # Launch JupyterLab rooted at the project directory so that relative paths
 # inside the notebooks (e.g. ../data/sdss_output/) resolve correctly.
 # Output is logged to logs/jupyter.log and the process runs in the background.
-nohup jupyter lab --notebook-dir="$(pwd)" notebooks/ > logs/jupyter.log 2>&1 &
-
+#nohup jupyter lab --notebook-dir="$(pwd)" notebooks/ > logs/jupyter.log 2>&1 &
+nohup jupyter lab --notebook-dir="$(pwd)" . > logs/jupyter.log 2>&1 &
 echo "JupyterLab started (PID $!). See logs/jupyter.log for the server URL."
